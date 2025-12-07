@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component, type ErrorInfo, type ReactNode } from 'react';
+import React, { useState, useEffect, type ErrorInfo, type ReactNode } from 'react';
 import { Snowfall } from './components/Snowfall';
 import { DoorGrid } from './components/DoorGrid';
 import { RiddleModal } from './components/RiddleModal';
@@ -18,7 +18,7 @@ interface ErrorBoundaryState {
 }
 
 // Error Boundary Component to catch crashes in children (like RiddleModal)
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
